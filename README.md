@@ -3,3 +3,4 @@
 
 ### Topics Covered
 1. Angular CLI
+2. Basics
