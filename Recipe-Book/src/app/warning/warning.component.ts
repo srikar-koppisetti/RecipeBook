@@ -7,7 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarningComponent implements OnInit {
 
-  constructor() { }
+  userName = '';
+  notNull = true;
+
+  constructor() {
+  }
+
+  onKey(event: any) {
+    this.userName = (<HTMLInputElement>event.target).value;
+    if(this.userName !== ''){
+      this.notNull = false;
+    }else{
+      this.notNull = true;
+    }
+  }
+
+  onClick(){
+    this.userName = '';
+    if(this.userName !== ''){
+      this.notNull = false;
+    }else{
+      this.notNull = true;
+    }
+  }
 
   ngOnInit() {
   }

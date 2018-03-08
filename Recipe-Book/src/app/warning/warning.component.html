@@ -1,3 +1,6 @@
-<h2>
-  X  Warning X
-</h2>
+
+<input type="text" class="form-control" [(ngModel)]="userName"(keyup)="onKey($event)">
+<br>
+<p>{{userName}}</p>
+<br>
+<button [disabled]="notNull" class="btn btn-primary" (click)="onClick()">Click Me!</button>

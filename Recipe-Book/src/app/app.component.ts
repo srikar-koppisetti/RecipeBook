@@ -6,6 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Recipe Book';
-  owner = '';
+  title = 'No Success';
+
+  allowSuccess = false;
+
+  constructor(){
+    setTimeout(() =>{
+      this.allowSuccess = true;
+    },2000);
+  }
+
+  onClickSuccess(){
+    this.title = 'Yes, it is success!';
+  }
 }
